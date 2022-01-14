@@ -1,0 +1,43 @@
+.button-primary {
+  flex-direction: column;
+  float: right;
+  margin-right: 50px;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid lightgray;
+  color: black;
+  font-size: 18px;
+  padding: 4px 10px;
+  font-weight: 600;
+  box-shadow: 0px 0px 12px -4px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  text-align: center;
+}
+
+.button-position {
+  text-decoration: none;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+}
+
+
+@media only screen and (max-width: 975px) {
+  .button-primary {
+    flex-direction: column;
+    display: flex;
+    float: right;
+    margin-right: 5%;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid lightgray;
+    color: black;
+    font-size: 18px;
+    padding: 2px 4px;
+    font-weight: 600;
+    box-shadow: 0px 0px 12px -4px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    text-align: center;
+  }
+}

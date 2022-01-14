@@ -1,0 +1,112 @@
+.main-div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.tbl-view {
+  width: 60%;
+  margin-left: 5%;
+  margin-right: 5%;
+  flex-direction: column;
+}
+
+.actions {
+  opacity: 0;
+  flex-direction: column;
+}
+
+.save-button {
+  margin-top: 50px;
+  border: none;
+  border-radius: 1px solid gray;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-align: right;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: right;
+}
+
+.save-button:hover {
+  margin-top: 50px;
+  border: none;
+  border-radius: 1px solid gray;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-align: right;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: darkgrey;
+  float: right;
+}
+
+.side-div {
+  width: 30%;
+  position: relative;
+}
+.badge-ele {
+  margin-right: 10px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  margin-bottom: 50px;
+}
+
+.badge-icon {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-buttons {
+  float: right;
+
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+.filter-text {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+tr:hover .actions {
+  opacity: 1;
+}
+
+tbody td a {
+  color: gray;
+}
+
+tbody td a:hover {
+  color: black;
+}
+
+@media only screen and (max-width: 975px) {
+  .tbl-view {
+    margin-right: 5%;
+    flex-direction: column;
+  }
+  .main-div {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .side-div {
+    width: 90%;
+    position: relative;
+    flex-direction: row;
+  }
+  .badge-icon {
+    display: flex;
+    flex-direction: column;
+  }
+}
