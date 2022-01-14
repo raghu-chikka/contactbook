@@ -7,11 +7,7 @@ import { deleteContact } from "../../actions/actions";
 const Displaycontact = ({ contact }) => {
   const dispatch = useDispatch();
   const { id, name, number, email, type } = contact;
-  let newtype = []
- if(type === "business"){
-   newtype = type;
-   console.log(newtype)
- }
+
   return (
     <>
       <tr key={contact.id} scope="row">
