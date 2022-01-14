@@ -3,10 +3,11 @@ import "./Contact.css";
 import { useSelector } from "react-redux";
 import Displaycontact from "./Displaycontact";
 import Badge from "react-bootstrap/Badge";
-import { useNavigate } from "react-router-dom";
+import PersonalContact from "./PersonalContact";
+
 
 const Contacts = () => {
-  const navigate = useNavigate();
+  
   const [personalCnt, setPersonalCnt] = useState(false);
   const [businessCnt, setBusinessCnt] = useState(false);
   const contacts = useSelector((state) => state.contact.contacts);
@@ -19,8 +20,8 @@ const Contacts = () => {
   contacts.filter(function (contact1) {
     return contact1.gender === "male" ? cmale++ : cfmale++;
   });
-  contacts.filter(function (contact1) {
-    return contact1.type === "personal" ? personal++ : business++;
+  contacts.filter(function (contact2) {
+    return contact2.type === "personal" ? personal++ : business++;
   });
 
   const personalContact = () => {

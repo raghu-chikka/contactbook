@@ -9,7 +9,7 @@ const NavBar = () => {
         <div className="navbar shadow fixed-top navbar-expand navbar-light bg-light">
           <div className="container">
             <a href="#" className="navbar-brand">
-              <h4> The Contact Book</h4>
+              <h4> The Contact List</h4>
             </a>
           </div>
           <div className="button-position">

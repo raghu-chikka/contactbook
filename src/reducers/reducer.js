@@ -48,7 +48,7 @@ export const contactReducer = (state = initialState, action) => {
       case "BUSINESS_CONTACT":
         return {          
           contacts: state.contacts.filter(
-            (contact) => contact.type == "business"
+            (contact) => contact.type == "business"            
           )
         };
         case "PERSONAL_CONTACT":

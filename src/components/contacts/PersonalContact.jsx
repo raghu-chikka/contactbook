@@ -1,25 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
 import Avatar from "react-avatar";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { deleteContact } from "../../actions/actions";
 
-const Displaycontact = ({ contact }) => {
+const PersonalContact = ({ contact }) => {
   const dispatch = useDispatch();
+  
+ const [newName, setNewName] = useState("");
+ const [newNum, setNewNum] = useState("");
+ const [newemail, setNewemail] = useState("")
+ 
   const { id, name, number, email, type } = contact;
-  let newtype = []
- if(type === "business"){
-   newtype = type;
-   console.log(newtype)
- }
+
+ if(type === "personal"){
+   return (setNewName(name),setNewNum(number),setNewemail(email));
+}
+
+//  type==="business" ? (name, number, email) : null
+
   return (
     <>
-      <tr key={contact.id} scope="row">
+      <tr scope="row">
         <td>
-          <Avatar className="mr-3" name={name} size="35" round={true} /> {name}
+          <Avatar className="mr-3" name={name} size="35" round={true} /> {newName}
         </td>
-        <td>{number}</td>
-        <td>{email}</td>
+        <td>{newNum}</td>
+        <td>{newemail}</td>
         <td className="actions">
           <Link to={`/editcontact/${id}`}>
             <span className="material-icons dark mr-5">edit</span>
@@ -37,4 +44,4 @@ const Displaycontact = ({ contact }) => {
   );
 };
 
-export default Displaycontact;
+export default PersonalContact;
